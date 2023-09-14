@@ -71,31 +71,33 @@ int main(void)
             // Process each query separately
             for (int i = 0; i < p; i++)
             {
-                scanf("%d", &rank[p]);
+                scanf("%d", &rank[i]);
             }
 
             // Read elements for sequence a
             for (int i = 0; i <= m+2; i++)
             {
-                printf("\t%d", a[i]);
+                printf("\n%d", a[i]);
             }
+            printf("\n----------");
 
             // Read elements for sequence b
             for (int i = 0; i <= n+2; i++)
             {
-                printf("\t%d", b[i]);
+                printf("\n%d", b[i]);
             }
+            printf("\n----------");
 
             // Process each query separately
-            for (int i = 0; i < p; i++)
+            for (int i = 0; i < p+2; i++)
             {
-                printf("\t%d", rank[p]);
+                printf("\n%d", rank[i]);
             }
+            printf("\n----------");
 
 
     // Binary search in sequence a
     int low = 0, high = m + 1;
-    p = 1;
     while (low <= high)
     {
         int mid = low + (high - low) / 2;
@@ -103,13 +105,19 @@ int main(void)
 
         printf("\nlow %d high %d i %d j %d ", low, high, mid, j);
 
+        int k = 0;
         if (j >= 0 && b[j] < a[mid] && a[mid] <= b[j + 1])
         {
+            while(k < p)
+            {
+
             // Found the element
             printf("\na[%d]=%d b[%d]=%d a[%d]=%d\n", mid, a[mid], j, b[j], j + 1, a[mid]);
-            printf("\na[%d]=%d has rank %d\n\n", mid, a[mid], rank[p]);
+            printf("\na[%d]=%d has rank %d\n\n", mid, a[mid], rank[k]);
             p++;
             break;
+
+            }
         }
         else if (j >= 0 && a[mid] < b[j])
         {
