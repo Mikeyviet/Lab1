@@ -28,6 +28,7 @@ int main(void)
         printf("\nSorry, the number you guessed, %d, is not the same as the number in the computer, %d\n\n,", total, num);
     }
 
+printf("\n\nTry again later\n");
 
 
     return 0;
