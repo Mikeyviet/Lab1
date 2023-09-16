@@ -41,55 +41,66 @@ int main(void)
 
 
     int m, n, p;
+    m = 0;
+    n = 0;
+    p = 0;
 
     // Read input values from standard input (Linux shell redirection)
     scanf("%d %d %d", &m, &n, &p);
 
+    printf("\n\nThe first line is: m = %d, n = %d, and p = %d\n", m, n, p);
   
     // Dynamically allocate memory for sequences a and b
     int *rank = (int *)malloc((p + 2) * sizeof(int));
     int *a = (int *)malloc((m + 2) * sizeof(int));
     int *b = (int *)malloc((n + 2) * sizeof(int));
 
+    // rank = NULL;
+    // a = NULL;
+    // b = NULL;
+
     // Initialize sentinel values
+    rank[0] =  0;
+    rank[p + 1] = 0;
+
     a[0] = b[0] = -99999999;
     a[m + 1] = b[n + 1] = 99999999;
 
 
             // Read elements for sequence a
-            for (int i = 0; i <= m+2; i++)
+            for (int i = 1; i <= m; i++)
             {
                 scanf("%d", &a[i]);
             }
 
             // Read elements for sequence b
-            for (int i = 0; i <= n+2; i++)
+            for (int i = 1; i <= n; i++)
             {
                 scanf("%d", &b[i]);
             }
 
             // Process each query separately
-            for (int i = 0; i < p; i++)
+            for (int i = 1; i <= p; i++)
             {
                 scanf("%d", &rank[i]);
             }
 
             // Read elements for sequence a
-            for (int i = 0; i <= m+2; i++)
+            for (int i = 0; i <= m+1; i++)
             {
                 printf("\n%d", a[i]);
             }
             printf("\n----------");
 
             // Read elements for sequence b
-            for (int i = 0; i <= n+2; i++)
+            for (int i = 0; i <= n+1; i++)
             {
                 printf("\n%d", b[i]);
             }
             printf("\n----------");
 
             // Process each query separately
-            for (int i = 0; i < p+2; i++)
+            for (int i = 0; i <= p+1; i++)
             {
                 printf("\n%d", rank[i]);
             }

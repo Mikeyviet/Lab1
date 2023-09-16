@@ -1,75 +1,13 @@
 {
-<<<<<<< HEAD
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "C/C++ Runner: Debug Session",
-            "type": "lldb",
-            "request": "launch",
-            "args": [],
-            "cwd": "/Users/mikeyviet/Documents/CSE3318/Lab1",
-            "program": "/Users/mikeyviet/Documents/CSE3318/Lab1/build/Debug/outDebug"
-        },
-        {
-            "name": "(lldb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb"
-        },
-        {
-            "name": "C/C++: clang build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "C/C++: clang build active file"
-        }
-    ]
-=======
   "version": "0.2.0",
   "configurations": [
     {
       "name": "C/C++ Runner: Debug Session",
-      "type": "cppdbg",
+      "type": "lldb",
       "request": "launch",
       "args": [],
-      "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/workspaces/Lab1",
-      "program": "/workspaces/Lab1/build/Debug/outDebug",
-      "MIMode": "lldb",
-      "miDebuggerPath": "lldb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ]
-    },
-    {
-      "name": "(lldb) Launch",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "enter program name, for example ${workspaceFolder}/a.out",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb"
+      "cwd": "/Users/mikeyviet/Documents/CSE3318/Lab1",
+      "program": "/Users/mikeyviet/Documents/CSE3318/Lab1/build/Debug/outDebug"
     }
   ]
->>>>>>> 8d3ef0df2d29738321b21b52590fa2eb3d3eccac
 }
